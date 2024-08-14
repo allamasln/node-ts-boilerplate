@@ -1,0 +1,26 @@
+{
+  "name": "express-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch --clear-screen=false src/index.ts | pino-pretty",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "biome check ./src",
+    "lint:fix": "biome check src --fix",
+    "format": "biome format src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "lint-staged": "^15.2.9",
+    "pino": "^9.3.2",
+    "pino-pretty": "^11.2.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "tsx": "^4.17.0"
+  }
+}
