@@ -1,4 +1,7 @@
+import express from 'express'
 import { pino } from 'pino'
+
+const app = express()
 
 const logger = pino({
   name: 'server start',
@@ -8,8 +11,10 @@ const logger = pino({
   },
 })
 
-function main(): void {
-  logger.info('Hello')
-}
+app.get('/health', (req, res) => {
+  res.json({
+    success: true,
+  })
+})
 
-main()
+export { app, logger }

@@ -35,5 +35,5 @@ make up
 ##### Stop
 
 ```shell
-docker-compose down
+make down
 ```

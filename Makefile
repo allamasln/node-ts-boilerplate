@@ -24,6 +24,18 @@ stop:
 clean:
 	docker-compose down --rmi all --volumes --remove-orphans
 
+test:
+	pnpm test
+
+format:
+	pnpm run format
+
+lint:
+	pnpm run lint
+
+lint-fix:
+	pnpm run lint:fix
+
 help:
 	@echo "Available commands:"
 	@echo "  up           - Start the services in detached mode"
@@ -34,3 +46,7 @@ help:
 	@echo "  sh           - Open a shell in the $(SERVICE) container"
 	@echo "  stop         - Stop the $(SERVICE) service"
 	@echo "  clean        - Remove containers, images, and volumes"
+	@echo "  test         - Run the tests"
+	@echo "  format       - Format the code"
+	@echo "  lint         - Lint the code"
+	@echo "  lint-fix     - Lint the code and fix issues"
